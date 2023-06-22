@@ -1,0 +1,2943 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n# ANÁLISIS DE DATOS\n### Proyecto integrador\n##### Carolina Alvarado, Miguel Álvarez, Kevin Barrazueta, Victor Mendoza",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:50:28+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/text",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>ANÁLISIS DE DATOS</h1>\n<h3>Proyecto integrador</h3>\n<h5>Carolina Alvarado, Miguel Álvarez, Kevin Barrazueta, Victor Mendoza</h5>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_1543616857",
+      "id": "paragraph_1687405198086_847117413",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:46:21+0000",
+      "dateFinished": "2023-06-22T15:46:21+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:273"
+    },
+    {
+      "text": "%md\n1. Lectura del csv",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:51:58+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/text",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol>\n<li>Lectura del csv</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687449037115_640563373",
+      "id": "paragraph_1687449037115_640563373",
+      "dateCreated": "2023-06-22T15:50:37+0000",
+      "dateStarted": "2023-06-22T15:51:35+0000",
+      "dateFinished": "2023-06-22T15:51:35+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:274"
+    },
+    {
+      "text": "val data = spark\n    .read\n    .option(\"inferSchema\",\"true\")\n    .option(\"header\", \"true\")\n    .option(\"delimiter\", \";\")\n    .csv(\"/home/ubuntu/Escritorio/Practicum 1.2/enemdu_vivienda_hogar_2023_I_trimestre.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:34:56+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdata\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [area: int, ciudad: int ... 55 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024663_1453021778",
+      "id": "paragraph_1687391815019_1266651230",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:275"
+    },
+    {
+      "text": "%md\n2. Creacion del schema con nombres y tipo de datos correspondientes",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:52:24+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"2\">\n<li>Creacion del schema con nombres y tipo de datos correspondientes</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687449104938_879731",
+      "id": "paragraph_1687449104938_879731",
+      "dateCreated": "2023-06-22T15:51:44+0000",
+      "dateStarted": "2023-06-22T15:52:24+0000",
+      "dateFinished": "2023-06-22T15:52:24+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:276"
+    },
+    {
+      "text": "import org.apache.spark.sql.types._\nval myDataSchema = StructType(\n\tArray(\n\t\tStructField(\"area\", IntegerType, true),\n\t\tStructField(\"ciudad\", IntegerType, true),\n\t\tStructField(\"conglomerado\", IntegerType, true),\n\t\tStructField(\"panelm\", IntegerType, true),\n\t\tStructField(\"vivienda\", IntegerType, true),\n\t\tStructField(\"hogar\", IntegerType, true),\n\t\tStructField(\"viaAccesoPrincipal\", IntegerType, true),\n\t\tStructField(\"tipoVivienda\", IntegerType, true),\n\t\tStructField(\"materialVivienda\", IntegerType, true),\n\t\tStructField(\"estadoMaterial\", IntegerType, true),\n\t\tStructField(\"materialSuelo\", IntegerType, true),\n\t\tStructField(\"estadoSuelo\", IntegerType, true),\n\t\tStructField(\"materialParedes\", IntegerType, true),\n\t\tStructField(\"estadoParedes\", IntegerType, true),\n\t\tStructField(\"numCuartos\", IntegerType, true),\n\t\tStructField(\"cuartosDormitorio\", IntegerType, true),\n\t\tStructField(\"cuartoNegocio\", IntegerType, true),\n\t\tStructField(\"cuartoCocina\", IntegerType, true),\n\t\tStructField(\"combustibleCocina\", IntegerType, true),\n\t\tStructField(\"servicioHigienico\", IntegerType, true),\n\t\tStructField(\"sinServicioHigienico\", StringType, true),\n\t\tStructField(\"tipoSanitarioCercano\", StringType, true),\n\t\tStructField(\"servicioAgua\", IntegerType, true),\n\t\tStructField(\"medidorAgua\", StringType, true),\n\t\tStructField(\"juntaAgua\", StringType, true),\n\t\tStructField(\"tipoAgua\", IntegerType, true),\n\t\tStructField(\"servicioDucha\", IntegerType, true),\n\t\tStructField(\"tipoAlumbrado\", IntegerType, true),\n\t\tStructField(\"botaBasura\", IntegerType, true),\n\t\tStructField(\"hogarVivienda\", IntegerType, true),\n\t\tStructField(\"valorArriendo\", IntegerType, true),\n\t\tStructField(\"arriendoAgua\", StringType, true),\n\t\tStructField(\"arriendoLuz\", StringType, true),\n\t\tStructField(\"relacionPropietario\", StringType, true),\n\t\tStructField(\"vehiculosHogar\", IntegerType, true),\n\t\tStructField(\"cantidadVehiculos\", StringType, true),\n\t\tStructField(\"motosHogar\", IntegerType, true),\n\t\tStructField(\"cantidadMotos\", StringType, true),\n\t\tStructField(\"combustibleSuper\", StringType, true),\n\t\tStructField(\"gastoSuper\", StringType, true),\n\t\tStructField(\"combustibleExtra\", StringType, true),\n\t\tStructField(\"gastoExtra\", StringType, true),\n\t\tStructField(\"combustibleDiesel\", StringType, true),\n\t\tStructField(\"gastoDiesel\", StringType, true),\n\t\tStructField(\"combustibleEcopais\", StringType, true),\n\t\tStructField(\"gastoEcopais\", StringType, true),\n\t\tStructField(\"combustibleElectricidad\", StringType, true),\n\t\tStructField(\"gastoElectricidad\", StringType, true),\n\t\tStructField(\"combustibleGas\", StringType, true),\n\t\tStructField(\"gastoGas\", StringType, true),\n\t\tStructField(\"estrato\", IntegerType, true),\n\t\tStructField(\"fexp\", StringType, true),\n\t\tStructField(\"ump\", LongType, true),\n\t\tStructField(\"idVivienda\", LongType, true),\n\t\tStructField(\"idHogar\", DoubleType, true),\n\t\tStructField(\"periodo\", IntegerType, true),\n\t\tStructField(\"mes\", IntegerType, true)\n\t)\n)",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T18:46:21+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.types._\n\u001b[1m\u001b[34mmyDataSchema\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.types.StructType\u001b[0m = StructType(StructField(area,IntegerType,true), StructField(ciudad,IntegerType,true), StructField(conglomerado,IntegerType,true), StructField(panelm,IntegerType,true), StructField(vivienda,IntegerType,true), StructField(hogar,IntegerType,true), StructField(viaAccesoPrincipal,IntegerType,true), StructField(tipoVivienda,IntegerType,true), StructField(materialVivienda,IntegerType,true), StructField(estadoMaterial,IntegerType,true), StructField(materialSuelo,IntegerType,true), StructField(estadoSuelo,IntegerType,true), StructField(materialParedes,IntegerType,true), StructField(estadoParedes,IntegerType,true), StructField(numCuartos,IntegerType,true), StructField(cuartosDormitor...\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024663_937465845",
+      "id": "paragraph_1687391838298_464278738",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T18:46:21+0000",
+      "dateFinished": "2023-06-22T18:46:23+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:277"
+    },
+    {
+      "text": "val data = spark\n    .read\n    .option(\"inferSchema\",\"true\")\n    .option(\"header\", \"true\")\n    .option(\"delimiter\", \";\")\n    .schema(myDataSchema)\n    .csv(\"/workspace/zeppelin-paavanzada/enemdu_vivienda_hogar_2023_I_trimestre - copia.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T18:46:28+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdata\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [area: int, ciudad: int ... 55 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_185297798",
+      "id": "paragraph_1687391926768_1144448009",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T18:46:28+0000",
+      "dateFinished": "2023-06-22T18:46:30+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:278"
+    },
+    {
+      "text": "data.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:10+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- area: integer (nullable = true)\n |-- ciudad: integer (nullable = true)\n |-- conglomerado: integer (nullable = true)\n |-- panelm: integer (nullable = true)\n |-- vivienda: integer (nullable = true)\n |-- hogar: integer (nullable = true)\n |-- viaAccesoPrincipal: integer (nullable = true)\n |-- tipoVivienda: integer (nullable = true)\n |-- materialVivienda: integer (nullable = true)\n |-- estadoMaterial: integer (nullable = true)\n |-- materialSuelo: integer (nullable = true)\n |-- estadoSuelo: integer (nullable = true)\n |-- materialParedes: integer (nullable = true)\n |-- estadoParedes: integer (nullable = true)\n |-- numCuartos: integer (nullable = true)\n |-- cuartosDormitorio: integer (nullable = true)\n |-- cuartoNegocio: integer (nullable = true)\n |-- cuartoCocina: integer (nullable = true)\n |-- combustibleCocina: integer (nullable = true)\n |-- servicioHigienico: integer (nullable = true)\n |-- sinServicioHigienico: string (nullable = true)\n |-- tipoSanitarioCercano: string (nullable = true)\n |-- servicioAgua: integer (nullable = true)\n |-- medidorAgua: string (nullable = true)\n |-- juntaAgua: string (nullable = true)\n |-- tipoAgua: integer (nullable = true)\n |-- servicioDucha: integer (nullable = true)\n |-- tipoAlumbrado: integer (nullable = true)\n |-- botaBasura: integer (nullable = true)\n |-- hogarVivienda: integer (nullable = true)\n |-- valorArriendo: integer (nullable = true)\n |-- arriendoAgua: string (nullable = true)\n |-- arriendoLuz: string (nullable = true)\n |-- relacionPropietario: string (nullable = true)\n |-- vehiculosHogar: integer (nullable = true)\n |-- cantidadVehiculos: string (nullable = true)\n |-- motosHogar: integer (nullable = true)\n |-- cantidadMotos: string (nullable = true)\n |-- combustibleSuper: string (nullable = true)\n |-- gastoSuper: string (nullable = true)\n |-- combustibleExtra: string (nullable = true)\n |-- gastoExtra: string (nullable = true)\n |-- combustibleDiesel: string (nullable = true)\n |-- gastoDiesel: string (nullable = true)\n |-- combustibleEcopais: string (nullable = true)\n |-- gastoEcopais: string (nullable = true)\n |-- combustibleElectricidad: string (nullable = true)\n |-- gastoElectricidad: string (nullable = true)\n |-- combustibleGas: string (nullable = true)\n |-- gastoGas: string (nullable = true)\n |-- estrato: integer (nullable = true)\n |-- fexp: string (nullable = true)\n |-- ump: long (nullable = true)\n |-- idVivienda: long (nullable = true)\n |-- idHogar: double (nullable = true)\n |-- periodo: integer (nullable = true)\n |-- mes: integer (nullable = true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_816627345",
+      "id": "paragraph_1687392014355_495720322",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:10+0000",
+      "dateFinished": "2023-06-22T15:41:10+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:279"
+    },
+    {
+      "text": "data.columns",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:15+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres4\u001b[0m: \u001b[1m\u001b[32mArray[String]\u001b[0m = Array(area, ciudad, conglomerado, panelm, vivienda, hogar, viaAccesoPrincipal, tipoVivienda, materialVivienda, estadoMaterial, materialSuelo, estadoSuelo, materialParedes, estadoParedes, numCuartos, cuartosDormitorio, cuartoNegocio, cuartoCocina, combustibleCocina, servicioHigienico, sinServicioHigienico, tipoSanitarioCercano, servicioAgua, medidorAgua, juntaAgua, tipoAgua, servicioDucha, tipoAlumbrado, botaBasura, hogarVivienda, valorArriendo, arriendoAgua, arriendoLuz, relacionPropietario, vehiculosHogar, cantidadVehiculos, motosHogar, cantidadMotos, combustibleSuper, gastoSuper, combustibleExtra, gastoExtra, combustibleDiesel, gastoDiesel, combustibleEcopais, gastoEcopais, combustibleElectricidad, gastoElectricidad, combustibleGas, gast...\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_1198766004",
+      "id": "paragraph_1687400741406_742730247",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:15+0000",
+      "dateFinished": "2023-06-22T15:41:15+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:280"
+    },
+    {
+      "text": "%md\n## ANÁLISIS DE DATOS NÚMERICOS Y NO NUMÉRICOS",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:53:15+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/text",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>ANÁLISIS DE DATOS NÚMERICOS Y NO NUMÉRICOS</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687449162167_1828037507",
+      "id": "paragraph_1687449162167_1828037507",
+      "dateCreated": "2023-06-22T15:52:42+0000",
+      "dateStarted": "2023-06-22T15:53:12+0000",
+      "dateFinished": "2023-06-22T15:53:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:281"
+    },
+    {
+      "text": "%md\n1. Se agrupa a cada uno de los hogares, para tener un conteo de cada respuesta",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T16:03:51+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol>\n<li>Se agrupa a cada uno de los hogares, para tener un conteo de cada respuesta</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687449199446_1454588174",
+      "id": "paragraph_1687449199446_1454588174",
+      "dateCreated": "2023-06-22T15:53:19+0000",
+      "dateStarted": "2023-06-22T16:03:49+0000",
+      "dateFinished": "2023-06-22T16:03:49+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:282"
+    },
+    {
+      "text": "data.groupBy(\"hogar\").count().sort(\"hogar\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:18+0000",
+      "progress": 33,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+-----+\n|hogar|count|\n+-----+-----+\n|    1|26433|\n|    2|  116|\n|    3|   23|\n|    4|    7|\n|    5|    1|\n+-----+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=0",
+              "$$hashKey": "object:2259"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=1",
+              "$$hashKey": "object:2260"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_960033348",
+      "id": "paragraph_1687401221947_1457807001",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:18+0000",
+      "dateFinished": "2023-06-22T15:41:21+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:283"
+    },
+    {
+      "text": "%md\n2. Se toma el código de cada parroquia, para agruparlos con su conglomerado, su panel, y el area a la cual pertenecen.\n- La parroquia con el código 10150 (Cuenca), en su mayoría pertenecen el area 1 (urbana)",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T16:01:13+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"2\">\n<li>Se toma el código de cada parroquia, para agruparlos con su conglomerado, su panel, y el area a la cual pertenecen.</li>\n</ol>\n<ul>\n<li>La parroquia con el código 10150 (Cuenca), en su mayoría pertenecen el area 1 (urbana)</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687449313650_152825394",
+      "id": "paragraph_1687449313650_152825394",
+      "dateCreated": "2023-06-22T15:55:13+0000",
+      "dateStarted": "2023-06-22T16:01:13+0000",
+      "dateFinished": "2023-06-22T16:01:13+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:284"
+    },
+    {
+      "text": "data.select(\"ciudad\", \"conglomerado\", \"panelm\", \"area\")\n.groupBy(\"ciudad\", \"conglomerado\", \"panelm\", \"area\")\n.count()\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:24+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+------------+------+----+-----+\n|ciudad|conglomerado|panelm|area|count|\n+------+------------+------+----+-----+\n| 10150|       11403|    28|   1|    7|\n| 10150|       14104|    42|   1|    7|\n| 10150|       38302|    42|   1|    7|\n| 10150|       72101|    32|   1|    7|\n| 10170|      901002|    29|   2|    7|\n| 10550|        1401|    34|   1|    7|\n| 40153|         704|    32|   1|    7|\n| 70150|       35502|    42|   1|    7|\n| 90150|      322403|    31|   1|    7|\n| 91050|       26103|    35|   1|    7|\n|140153|         204|    42|   2|    6|\n|140651|      900202|    32|   2|    6|\n|140751|      900103|    29|   2|    6|\n|141250|         202|    26|   2|    7|\n|160252|         502|    42|   1|    7|\n|170150|       66401|    42|   1|    5|\n|170150|      326301|    27|   1|    7|\n| 20250|      901202|    42|   2|    8|\n| 40450|      900102|    28|   2|    7|\n| 40554|      900701|    27|   2|    7|\n+------+------------+------+----+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=2",
+              "$$hashKey": "object:2350"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=3",
+              "$$hashKey": "object:2351"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_17209096",
+      "id": "paragraph_1687400874060_1219751091",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:24+0000",
+      "dateFinished": "2023-06-22T15:41:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:285"
+    },
+    {
+      "text": "%md\n3. Se agrupa la columna \"area\" para tener un conteo, de cuantas personas pertenecen al área rural y cuantas al área urbana",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T16:05:54+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"3\">\n<li>Se agrupa la columna &ldquo;area&rdquo; para tener un conteo, de cuantas personas pertenecen al área rural y cuantas al área urbana</li>\n</ol>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687449841480_803757031",
+      "id": "paragraph_1687449841480_803757031",
+      "dateCreated": "2023-06-22T16:04:01+0000",
+      "dateStarted": "2023-06-22T16:05:54+0000",
+      "dateFinished": "2023-06-22T16:05:54+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:286"
+    },
+    {
+      "text": "val result = data\n  .select($\"area\")\n  .groupBy($\"area\")\n  .count()\n  .withColumn(\"Area\", when($\"area\" === 1, \"urbana\").otherwise(\"rural\"))\n  //.drop(\"area\")\n  .orderBy(\"area\")\n  .show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:28+0000",
+      "progress": 100,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+-----+\n|  Area|count|\n+------+-----+\n| rural| 6884|\n|urbana|19696|\n+------+-----+\n\n\u001b[1m\u001b[34mresult\u001b[0m: \u001b[1m\u001b[32mUnit\u001b[0m = ()\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=4",
+              "$$hashKey": "object:2441"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=5",
+              "$$hashKey": "object:2442"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_334439767",
+      "id": "paragraph_1687400183211_1502031927",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:28+0000",
+      "dateFinished": "2023-06-22T15:41:30+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:287"
+    },
+    {
+      "text": "%md\n4. Tenemos la cantidad de persona que han respondido esta pregunta (26580)\n- Tenemos un mínimo: Una persona tiene 1 cuarto, 0 cuartos para dormir, 0 cuartos de negocio.\n- Tenemos un máximo: Una persona tiene 13 cuartos, 10 para dormir, 3 para negocio.",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T16:08:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"4\">\n<li>Tenemos la cantidad de persona que han respondido esta pregunta (26580)</li>\n</ol>\n<ul>\n<li>Tenemos un mínimo: Una persona tiene 1 cuarto, 0 cuartos para dormir, 0 cuartos de negocio.</li>\n<li>Tenemos un máximo: Una persona tiene 13 cuartos, 10 para dormir, 3 para negocio.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687449965637_2076523070",
+      "id": "paragraph_1687449965637_2076523070",
+      "dateCreated": "2023-06-22T16:06:05+0000",
+      "dateStarted": "2023-06-22T16:08:57+0000",
+      "dateFinished": "2023-06-22T16:08:57+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:288"
+    },
+    {
+      "text": "data\n.select($\"numCuartos\".as(\"Numero de cuartos\"), \n        $\"cuartosDormitorio\".as (\"Cuartos para dormir\"), \n        $\"cuartoNegocio\".as(\"Cuartos para negocio\"))\n        \n//.filter($\"cuartoNegocio\" > 0)\n//.where($\"cuartosDormitorio\">0)\n.filter($\"cuartoNegocio\".isNotNull && $\"numCuartos\".isNotNull && $\"cuartosDormitorio\".isNotNull)\n.summary()\n.show\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:32+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+------------------+-------------------+--------------------+\n|summary| Numero de cuartos|Cuartos para dormir|Cuartos para negocio|\n+-------+------------------+-------------------+--------------------+\n|  count|             26580|              26580|               26580|\n|   mean|3.4603837471783296| 2.3968773513920243| 0.04334085778781038|\n| stddev|1.3394949568297714| 1.0929959562062133| 0.21337138068131398|\n|    min|                 1|                  0|                   0|\n|    25%|                 3|                  2|                   0|\n|    50%|                 3|                  2|                   0|\n|    75%|                 4|                  3|                   0|\n|    max|                13|                 10|                   3|\n+-------+------------------+-------------------+--------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=6",
+              "$$hashKey": "object:2532"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=7",
+              "$$hashKey": "object:2533"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_1478627308",
+      "id": "paragraph_1687392166944_1766409026",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:32+0000",
+      "dateFinished": "2023-06-22T15:41:36+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:289"
+    },
+    {
+      "text": "%md\n5. Agrupamos las distintas categorías \"cuartos\" y luego hacemos un conteo para saber cuantas personas coinciden con esa respuesta.\n- Tres personas coinciden en tener solamente 1 cuarto y el mismo es de negocio. Mientras que 43 personas coinciden en tener 3 cuartos, uno exclusivo para dormir, y otro para negocio.",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T17:52:45+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"5\">\n<li>Agrupamos las distintas categorías &ldquo;cuartos&rdquo; y luego hacemos un conteo para saber cuantas personas coinciden con esa respuesta.</li>\n</ol>\n<ul>\n<li>Tres personas coinciden en tener solamente 1 cuarto y el mismo es de negocio. Mientras que 43 personas coinciden en tener 3 cuartos, uno exclusivo para dormir, y otro para negocio.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687450150084_1485865923",
+      "id": "paragraph_1687450150084_1485865923",
+      "dateCreated": "2023-06-22T16:09:10+0000",
+      "dateStarted": "2023-06-22T17:52:45+0000",
+      "dateFinished": "2023-06-22T17:52:45+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:290"
+    },
+    {
+      "text": "data\n  .select(col(\"numCuartos\"), col(\"cuartosDormitorio\"), col(\"cuartoNegocio\"), when(col(\"cuartoCocina\") === 1, 1).otherwise(0).alias(\"cuartoCocina\"))\n  .groupBy(\"numCuartos\", \"cuartosDormitorio\", \"cuartoNegocio\", \"cuartoCocina\")\n  .count()\n  .orderBy(\"numCuartos\")\n  .sort()\n  .filter($\"numCuartos\" >= $\"cuartosDormitorio\" + $\"cuartoNegocio\" + $\"cuartoCocina\")\n  .show(98)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:39+0000",
+      "progress": 50,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+-----------------+-------------+------------+-----+\n|numCuartos|cuartosDormitorio|cuartoNegocio|cuartoCocina|count|\n+----------+-----------------+-------------+------------+-----+\n|         1|                0|            1|           0|    3|\n|         1|                1|            0|           0|  146|\n|         1|                0|            0|           0|  501|\n|         1|                0|            0|           1|  377|\n|         2|                1|            1|           0|    2|\n|         2|                2|            0|           0|   39|\n|         2|                0|            1|           1|    2|\n|         2|                0|            0|           1|    5|\n|         2|                0|            0|           0|   10|\n|         2|                1|            0|           0|  193|\n|         2|                1|            0|           1| 2548|\n|         3|                2|            0|           0|  107|\n|         3|                2|            0|           1| 7627|\n|         3|                0|            1|           1|    1|\n|         3|                1|            0|           1|  225|\n|         3|                2|            1|           0|    4|\n|         3|                3|            0|           0|   11|\n|         3|                1|            1|           1|   12|\n|         3|                0|            2|           1|    1|\n|         3|                1|            0|           0|    8|\n|         3|                0|            0|           0|    2|\n|         3|                0|            0|           1|    1|\n|         4|                2|            0|           1|  504|\n|         4|                1|            1|           1|    3|\n|         4|                1|            0|           0|    4|\n|         4|                3|            0|           1| 7064|\n|         4|                2|            0|           0|    3|\n|         4|                2|            1|           1|   22|\n|         4|                3|            0|           0|   17|\n|         4|                0|            0|           0|    1|\n|         4|                1|            0|           1|   61|\n|         5|                3|            1|           1|   43|\n|         5|                2|            1|           1|    6|\n|         5|                4|            0|           0|    1|\n|         5|                2|            2|           1|    1|\n|         5|                1|            0|           1|   17|\n|         5|                3|            0|           1|  645|\n|         5|                2|            0|           1|  102|\n|         5|                4|            0|           1| 1796|\n|         6|                1|            0|           1|    1|\n|         6|                3|            0|           1|  201|\n|         6|                2|            0|           1|   29|\n|         6|                4|            1|           1|   21|\n|         6|                3|            1|           1|    8|\n|         6|                3|            0|           0|    1|\n|         6|                4|            0|           1|  314|\n|         6|                5|            0|           1|  364|\n|         6|                3|            2|           1|    2|\n|         7|                6|            0|           1|  121|\n|         7|                3|            0|           1|   53|\n|         7|                1|            0|           1|    2|\n|         7|                4|            1|           1|    5|\n|         7|                2|            0|           1|    6|\n|         7|                5|            1|           1|    3|\n|         7|                5|            0|           1|   74|\n|         7|                3|            1|           1|    2|\n|         7|                4|            0|           1|  113|\n|         8|                6|            0|           0|    1|\n|         8|                7|            0|           1|   19|\n|         8|                5|            0|           1|   28|\n|         8|                2|            0|           1|    4|\n|         8|                6|            1|           1|    1|\n|         8|                5|            1|           1|    2|\n|         8|                6|            0|           1|   24|\n|         8|                4|            0|           1|   37|\n|         8|                3|            0|           1|   22|\n|         9|                5|            1|           1|    1|\n|         9|                1|            0|           1|    1|\n|         9|                8|            0|           1|    5|\n|         9|                5|            0|           1|   19|\n|         9|                3|            0|           1|    5|\n|         9|                4|            0|           1|   17|\n|         9|                4|            1|           1|    2|\n|         9|                6|            1|           1|    1|\n|         9|                7|            0|           1|    5|\n|         9|                6|            0|           1|   10|\n|        10|                9|            0|           1|    1|\n|        10|                3|            0|           1|    1|\n|        10|                6|            0|           1|    2|\n|        10|                5|            0|           1|    5|\n|        10|                8|            1|           1|    1|\n|        10|                8|            0|           1|    1|\n|        10|                7|            0|           1|    3|\n|        10|                4|            0|           1|    7|\n|        11|                6|            0|           1|    1|\n|        11|                5|            0|           1|    4|\n|        11|                9|            0|           1|    2|\n|        11|               10|            0|           1|    2|\n|        11|                5|            1|           1|    1|\n|        11|                4|            0|           1|    3|\n|        11|                7|            0|           1|    1|\n|        11|                8|            0|           1|    2|\n|        12|                4|            0|           1|    1|\n|        12|                8|            0|           1|    2|\n|        12|                6|            0|           1|    1|\n|        13|                5|            1|           1|    1|\n|        13|                8|            0|           1|    1|\n+----------+-----------------+-------------+------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=8",
+              "$$hashKey": "object:2623"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=9",
+              "$$hashKey": "object:2624"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_1757021884",
+      "id": "paragraph_1687393866380_2128794433",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:39+0000",
+      "dateFinished": "2023-06-22T15:41:40+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:291"
+    },
+    {
+      "text": "%md\n6. Agrupamos nuestra columna \"tipoVivienda\" para tener un conteo de cuantas personas han coincidido con la misma respuesta.\n- La mayoría coincide con la opción 1 (Carretera/ calle pavimentada o adoquinada)",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T16:19:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"6\">\n<li>Agrupamos nuestra columna &ldquo;tipoVivienda&rdquo; para tener un conteo de cuantas personas han coincidido con la misma respuesta.</li>\n</ol>\n<ul>\n<li>La mayoría coincide con la opción 1 (Carretera/ calle pavimentada o adoquinada)</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687450405014_1356895762",
+      "id": "paragraph_1687450405014_1356895762",
+      "dateCreated": "2023-06-22T16:13:25+0000",
+      "dateStarted": "2023-06-22T16:19:44+0000",
+      "dateFinished": "2023-06-22T16:19:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:292"
+    },
+    {
+      "text": "data\n.groupBy(\"tipoVivienda\")\n.count()\n.sort(\"tipoVivienda\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:47+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------+-----+\n|tipoVivienda|count|\n+------------+-----+\n|           1|15714|\n|           2| 8057|\n|           3|  678|\n|           4|  808|\n|           5| 1317|\n|           6|    6|\n+------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=10",
+              "$$hashKey": "object:2714"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=11",
+              "$$hashKey": "object:2715"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024664_50882012",
+      "id": "paragraph_1687402134272_814924035",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:47+0000",
+      "dateFinished": "2023-06-22T15:41:47+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:293"
+    },
+    {
+      "text": "%md\n7. Agrupamos las distintas columnas \"tipoVivienda\", \"viaAccesoPrincipal\", \"materialVivienda\", \"materialSuelo\" y \"materialParedes\"y luego hacemos un conteo para saber cuantas personas coinciden con esa respuesta.\n- Tres personas coinciden en tener su tipo de vivienda en la opción 1 (Casa o villa), la vía de acceso principal en la opción 3(Lastrado/ calle de tierra), el material de vivienda en la opción 3 (Zinc, Aluminio), el material del suelo en la opción 3 (Mármol o marmetón) y en el material de las paredes en la opción 1 (Hormigón/bloque/ladrillo)",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T16:32:05+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"7\">\n<li>Agrupamos las distintas columnas &ldquo;tipoVivienda&rdquo;, &ldquo;viaAccesoPrincipal&rdquo;, &ldquo;materialVivienda&rdquo;, &ldquo;materialSuelo&rdquo; y &quot;materialParedes&quot;y luego hacemos un conteo para saber cuantas personas coinciden con esa respuesta.</li>\n</ol>\n<ul>\n<li>Tres personas coinciden en tener su tipo de vivienda en la opción 1 (Casa o villa), la vía de acceso principal en la opción 3(Lastrado/ calle de tierra), el material de vivienda en la opción 3 (Zinc, Aluminio), el material del suelo en la opción 3 (Mármol o marmetón) y en el material de las paredes en la opción 1 (Hormigón/bloque/ladrillo)</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687450846139_1242913786",
+      "id": "paragraph_1687450846139_1242913786",
+      "dateCreated": "2023-06-22T16:20:46+0000",
+      "dateStarted": "2023-06-22T16:32:05+0000",
+      "dateFinished": "2023-06-22T16:32:05+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:294"
+    },
+    {
+      "text": "data\n.groupBy(\"tipoVivienda\", \"viaAccesoPrincipal\", \"materialVivienda\", \"materialSuelo\", \"materialParedes\")\n.count()\n.sort(\"tipoVivienda\")\n.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:50+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------+------------------+----------------+-------------+---------------+-----+\n|tipoVivienda|viaAccesoPrincipal|materialVivienda|materialSuelo|materialParedes|count|\n+------------+------------------+----------------+-------------+---------------+-----+\n|           1|                 3|               3|            3|              1|    3|\n|           1|                 3|               3|            4|              2|   12|\n|           1|                 1|               3|            5|              2|    1|\n|           1|                 1|               3|            4|              4|   23|\n|           1|                 1|               4|            5|              5|    6|\n|           1|                 2|               4|            5|              3|    2|\n|           1|                 1|               2|            1|              1|  603|\n|           1|                 2|               1|            2|              1|   77|\n|           1|                 3|               1|            4|              1|  178|\n|           1|                 1|               3|            1|              4|   25|\n|           1|                 1|               2|            5|              3|   10|\n|           1|                 4|               4|            2|              3|    1|\n|           1|                 4|               4|            5|              4|    9|\n|           1|                 1|               1|            5|              3|    1|\n|           1|                 3|               3|            2|              1|  749|\n|           1|                 1|               6|            5|              1|    1|\n|           1|                 3|               3|            5|              6|    9|\n|           1|                 4|               3|            7|              5|    2|\n|           1|                 3|               3|            5|              1|   89|\n|           1|                 3|               3|            2|              4|    5|\n+------------+------------------+----------------+-------------+---------------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=12",
+              "$$hashKey": "object:2805"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=13",
+              "$$hashKey": "object:2806"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_606332632",
+      "id": "paragraph_1687401928447_2093728825",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:50+0000",
+      "dateFinished": "2023-06-22T15:41:51+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:295"
+    },
+    {
+      "text": "%md\n8. Agrupamos el material de la vivienda con su estado para tener respuestas que conincidan entre los encuestados.\n- 522 personas tienen su vivienda de Fibrocemento, asbesto (eternit, eurolit) y se encuentran en mal estado",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T16:56:49+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"8\">\n<li>Agrupamos el material de la vivienda con su estado para tener respuestas que conincidan entre los encuestados.</li>\n</ol>\n<ul>\n<li>522 personas tienen su vivienda de Fibrocemento, asbesto (eternit, eurolit) y se encuentran en mal estado</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687452154245_1145080974",
+      "id": "paragraph_1687452154245_1145080974",
+      "dateCreated": "2023-06-22T16:42:34+0000",
+      "dateStarted": "2023-06-22T16:56:49+0000",
+      "dateFinished": "2023-06-22T16:56:51+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:296"
+    },
+    {
+      "text": "data\n.groupBy(\"materialVivienda\", \"estadoMaterial\")\n.count()\n.sort(\"materialVivienda\", \"estadoMaterial\")\n.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:41:54+0000",
+      "progress": 33,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------+--------------+-----+\n|materialVivienda|estadoMaterial|count|\n+----------------+--------------+-----+\n|               1|             1| 6031|\n|               1|             2| 2729|\n|               1|             3|  292|\n|               2|             1| 1869|\n|               2|             2| 2206|\n|               2|             3|  522|\n|               3|             1| 2787|\n|               3|             2| 5590|\n|               3|             3| 1964|\n|               4|             1|  650|\n|               4|             2|  898|\n|               4|             3|  498|\n|               5|             1|    5|\n|               5|             2|   11|\n|               5|             3|   13|\n|               6|             1|  157|\n|               6|             2|  280|\n|               6|             3|   78|\n+----------------+--------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=14",
+              "$$hashKey": "object:2896"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=15",
+              "$$hashKey": "object:2897"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_1133118839",
+      "id": "paragraph_1687402755723_893217364",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:41:54+0000",
+      "dateFinished": "2023-06-22T15:41:56+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:297"
+    },
+    {
+      "text": "%md\n9. Agrupamos el material del suelo con su estado para tener respuestas que conincidan entre los encuestados.\n- 2724 personas tienen su suelo de Duela, parquet, tablón tratado o piso flotante y se encuentran en buen estado",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T17:00:00+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"9\">\n<li>Agrupamos el material del suelo con su estado para tener respuestas que conincidan entre los encuestados.</li>\n</ol>\n<ul>\n<li>2724 personas tienen su suelo de Duela, parquet, tablón tratado o piso flotante y se encuentran en buen estado</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687453033002_2091271919",
+      "id": "paragraph_1687453033002_2091271919",
+      "dateCreated": "2023-06-22T16:57:13+0000",
+      "dateStarted": "2023-06-22T17:00:00+0000",
+      "dateFinished": "2023-06-22T17:00:00+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:298"
+    },
+    {
+      "text": "data\n.groupBy(\"materialSuelo\", \"estadoSuelo\")\n.count()\n.sort(\"materialSuelo\", \"estadoSuelo\")\n.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:42:01+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------+-----------+-----+\n|materialSuelo|estadoSuelo|count|\n+-------------+-----------+-----+\n|            1|          1| 2724|\n|            1|          2| 1250|\n|            1|          3|  146|\n|            2|          1| 7376|\n|            2|          2| 3801|\n|            2|          3|  179|\n|            3|          1|   58|\n|            3|          2|   25|\n|            3|          3|   10|\n|            4|          1| 1292|\n|            4|          2| 5649|\n|            4|          3| 1068|\n|            5|          1|  247|\n|            5|          2| 1473|\n|            5|          3|  636|\n|            6|          1|    1|\n|            6|          2|    2|\n|            6|          3|    7|\n|            7|          3|  625|\n|            8|          1|    1|\n+-------------+-----------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=16",
+              "$$hashKey": "object:2987"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=17",
+              "$$hashKey": "object:2988"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_796694157",
+      "id": "paragraph_1687403099732_1687093217",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:42:01+0000",
+      "dateFinished": "2023-06-22T15:42:01+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:299"
+    },
+    {
+      "text": "%md\n10. Agrupamos el material de las paredes con su estado para tener respuestas que conincidan entre los encuestados.\n- 1140 personas tienen sus paredes de Hormigón/bloque/ladrillo y se encuentran en mal estado",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T17:00:19+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"10\">\n<li>Agrupamos el material de las paredes con su estado para tener respuestas que conincidan entre los encuestados.</li>\n</ol>\n<ul>\n<li>1140 personas tienen sus paredes de Hormigón/bloque/ladrillo y se encuentran en mal estado</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687453132176_1153475737",
+      "id": "paragraph_1687453132176_1153475737",
+      "dateCreated": "2023-06-22T16:58:52+0000",
+      "dateStarted": "2023-06-22T17:00:19+0000",
+      "dateFinished": "2023-06-22T17:00:19+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:300"
+    },
+    {
+      "text": "data\n.groupBy(\"materialParedes\", \"estadoParedes\")\n.count()\n.sort(\"materialParedes\", \"estadoParedes\")\n.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:42:05+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------------+-------------+-----+\n|materialParedes|estadoParedes|count|\n+---------------+-------------+-----+\n|              1|            1|11814|\n|              1|            2|10478|\n|              1|            3| 1140|\n|              2|            1|   35|\n|              2|            2|   65|\n|              2|            3|   14|\n|              3|            1|  166|\n|              3|            2|  600|\n|              3|            3|  280|\n|              4|            1|  161|\n|              4|            2|  927|\n|              4|            3|  422|\n|              5|            1|    8|\n|              5|            2|   42|\n|              5|            3|   42|\n|              6|            1|   14|\n|              6|            2|  174|\n|              6|            3|  171|\n|              7|            1|    5|\n|              7|            2|    9|\n+---------------+-------------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=18",
+              "$$hashKey": "object:3078"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=19",
+              "$$hashKey": "object:3079"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_1801724668",
+      "id": "paragraph_1687403141924_1053042040",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "dateStarted": "2023-06-22T15:42:05+0000",
+      "dateFinished": "2023-06-22T15:42:06+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:301"
+    },
+    {
+      "text": "%md\n11. Agrupamos el tipo de combustible para la cocina de los encuestados y junto a ello el tipo de vivienda en el que se encuentra.\n- 76 personas usan otro tipo de combustible para la cocina y habitan en una Casa/Villa",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T18:06:09+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"11\">\n<li>Agrupamos el tipo de combustible para la cocina de los encuestados y junto a ello el tipo de vivienda en el que se encuentra.</li>\n</ol>\n<ul>\n<li>76 personas usan otro tipo de combustible para la cocina y habitan en una Casa/Villa</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687453224606_1720295030",
+      "id": "paragraph_1687453224606_1720295030",
+      "dateCreated": "2023-06-22T17:00:24+0000",
+      "dateStarted": "2023-06-22T18:06:09+0000",
+      "dateFinished": "2023-06-22T18:06:09+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:302"
+    },
+    {
+      "text": "data\n .select($\"combustibleCocina\".as(\"Combustible\"), $\"tipoVivienda\".as(\"Tipo de vivienda\"))\n .groupBy(\"Combustible\", \"Tipo de vivienda\")\n .count()\n .sort(\"Tipo de vivienda\", \"Combustible\")\n .show(100)",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+----------------+-----+\n|Combustible|Tipo de vivienda|count|\n+-----------+----------------+-----+\n|          1|               1|14922|\n|          2|               1|  408|\n|          3|               1|  308|\n|          4|               1|   76|\n|          1|               2| 7764|\n|          2|               2|   14|\n|          3|               2|  207|\n|          4|               2|   72|\n|          1|               3|  605|\n|          2|               3|    3|\n|          3|               3|    6|\n|          4|               3|   64|\n|          1|               4|  727|\n|          2|               4|   46|\n|          3|               4|   14|\n|          4|               4|   21|\n|          1|               5| 1076|\n|          2|               5|  221|\n|          3|               5|    5|\n|          4|               5|   15|\n|          1|               6|    2|\n|          2|               6|    3|\n|          4|               6|    1|\n+-----------+----------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_13692514",
+      "id": "paragraph_1687403411598_33245266",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:303"
+    },
+    {
+      "text": "%md\n12. Agrupamos para poder tener información de como los encuestados viven a partir de tener servicio higiénico o no.\n- 82 personas no cuentan de servicio higénico, por lo cual usan una intalación sanitaria cercana o prestada, la cual es un Excusado y pozo séptico",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T17:09:38+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"12\">\n<li>Agrupamos para poder tener información de como los encuestados viven a partir de tener servicio higiénico o no.</li>\n</ol>\n<ul>\n<li>82 personas no cuentan de servicio higénico, por lo cual usan una intalación sanitaria cercana o prestada, la cual es un Excusado y pozo séptico</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687453381815_126219059",
+      "id": "paragraph_1687453381815_126219059",
+      "dateCreated": "2023-06-22T17:03:01+0000",
+      "dateStarted": "2023-06-22T17:09:38+0000",
+      "dateFinished": "2023-06-22T17:09:38+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:304"
+    },
+    {
+      "text": "data\n  .select($\"servicioHigienico\", $\"sinServicioHigienico\", $\"tipoSanitarioCercano\")\n  .filter($\"servicioHigienico\".isNotNull && $\"sinServicioHigienico\".isNotNull && $\"tipoSanitarioCercano\".isNotNull)\n  .groupBy(\"servicioHigienico\", \"sinServicioHigienico\", \"tipoSanitarioCercano\")\n  .count()\n  .orderBy(\"servicioHigienico\")\n  .sort()\n  .show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------+--------------------+--------------------+-----+\n|servicioHigienico|sinServicioHigienico|tipoSanitarioCercano|count|\n+-----------------+--------------------+--------------------+-----+\n|                1|                    |                    |19780|\n|                2|                    |                    | 5522|\n|                3|                    |                    |  589|\n|                4|                    |                    |  128|\n|                5|                   3|                   2|   82|\n|                5|                   3|                   3|    8|\n|                5|                   3|                   4|    2|\n|                5|                   1|                    |   13|\n|                5|                   2|                    |  385|\n|                5|                   3|                   1|   71|\n+-----------------+--------------------+--------------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_481376476",
+      "id": "paragraph_1687407874130_309382776",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:305"
+    },
+    {
+      "text": "%md\n13. Se filtran los valores, para poder tener únicamente el como obtienen esta agua.\n- 191 personas tienen su servicio de agua por medio de Carro repartidor/triciclo y No recibe agua por tubería sino por\notros medios",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T17:52:55+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"13\">\n<li>Se filtran los valores, para poder tener únicamente el como obtienen esta agua.</li>\n</ol>\n<ul>\n<li>191 personas tienen su servicio de agua por medio de Carro repartidor/triciclo y No recibe agua por tubería sino por<br />\notros medios</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687456164365_1456864267",
+      "id": "paragraph_1687456164365_1456864267",
+      "dateCreated": "2023-06-22T17:49:24+0000",
+      "dateStarted": "2023-06-22T17:52:55+0000",
+      "dateFinished": "2023-06-22T17:52:55+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:306"
+    },
+    {
+      "text": "data\n  .filter($\"servicioAgua\" =!= 2 && $\"servicioAgua\" =!= 3)\n  .groupBy(\"servicioAgua\", \"tipoAgua\")\n  .count()\n  .orderBy(\"servicioAgua\", \"tipoAgua\")\n  .show()\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------+--------+-----+\n|servicioAgua|tipoAgua|count|\n+------------+--------+-----+\n|           1|       1|21672|\n|           1|       2| 1761|\n|           1|       3|    1|\n|           1|       4|    1|\n|           4|       1|   63|\n|           4|       2|    5|\n|           4|       4|  191|\n|           5|       1|  339|\n|           5|       2|  179|\n|           5|       3|   13|\n|           5|       4|  334|\n|           6|       1|   13|\n|           6|       2|   28|\n|           6|       3|    6|\n|           6|       4|  310|\n|           7|       1|   21|\n|           7|       2|    1|\n|           7|       4|  202|\n+------------+--------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_250956690",
+      "id": "paragraph_1687403665490_1499866294",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:307"
+    },
+    {
+      "text": "%md\n14. Agrupamos las distintas categorías \"agua\" y luego hacemos un conteo para saber cuantas personas coinciden con esa respuesta.\n- 282 personas coinciden en tener Otra fuente por tubería, disponen de medidor de agua, el agua que tienen proviene de su junta y obtienen Por tubería dentro de la vivienda",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T17:56:19+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"14\">\n<li>Agrupamos las distintas categorías &ldquo;agua&rdquo; y luego hacemos un conteo para saber cuantas personas coinciden con esa respuesta.</li>\n</ol>\n<ul>\n<li>282 personas coinciden en tener Otra fuente por tubería, disponen de medidor de agua, el agua que tienen proviene de su junta y obtienen Por tubería dentro de la vivienda</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687456335040_995564873",
+      "id": "paragraph_1687456335040_995564873",
+      "dateCreated": "2023-06-22T17:52:15+0000",
+      "dateStarted": "2023-06-22T17:56:19+0000",
+      "dateFinished": "2023-06-22T17:56:19+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:308"
+    },
+    {
+      "text": "data\n  .select($\"servicioAgua\",$\"medidorAgua\",$\"juntaAgua\", $\"tipoAgua\")\n  .filter($\"servicioAgua\" === 2 or $\"servicioAgua\" === 3)\n  .groupBy($\"servicioAgua\",$\"medidorAgua\",$\"juntaAgua\", $\"tipoAgua\")\n  .count()\n  .orderBy(\"servicioAgua\",\"medidorAgua\",\"juntaAgua\", \"tipoAgua\")\n  .show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------+-----------+---------+--------+-----+\n|servicioAgua|medidorAgua|juntaAgua|tipoAgua|count|\n+------------+-----------+---------+--------+-----+\n|           2|          2|        1|       1|    1|\n|           2|          2|        1|       2|    1|\n|           2|          2|        2|       1|    1|\n|           2|          2|        2|       2|    1|\n|           2|          2|        2|       3|    1|\n|           2|          2|        2|       4|    4|\n|           3|          1|        1|       1|  282|\n|           3|          1|        1|       2|  211|\n|           3|          1|        2|       1|   37|\n|           3|          1|        2|       2|   35|\n|           3|          2|        1|       1|   49|\n|           3|          2|        1|       2|   55|\n|           3|          2|        2|       1|  336|\n|           3|          2|        2|       2|  402|\n|           3|          2|        2|       3|    7|\n|           3|          2|        2|       4|   17|\n+------------+-----------+---------+--------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_470270318",
+      "id": "paragraph_1687404298337_1623754653",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:309"
+    },
+    {
+      "text": "%md\n15. Agrupamos \"tipoVivienda\", \"area\" y \"alumbrado\" para obtener un conteo y saber cuantas personas coinciden con esa respuesta.\n- 10566 personas que viven en una Casa/Villa del sector urbano tiene luz a través de Empresa eléctrica pública, mientras que, solamente 1 persona que vive en un departamento del sector rural, tiene luz con una Vela, candil, mechero, gas.",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T18:00:21+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"15\">\n<li>Agrupamos &ldquo;tipoVivienda&rdquo;, &ldquo;area&rdquo; y &ldquo;alumbrado&rdquo; para obtener un conteo y saber cuantas personas coinciden con esa respuesta.</li>\n</ol>\n<ul>\n<li>10566 personas que viven en una Casa/Villa del sector urbano tiene luz a través de Empresa eléctrica pública, mientras que, solamente 1 persona que vive en un departamento del sector rural, tiene luz con una Vela, candil, mechero, gas.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687456585954_827158311",
+      "id": "paragraph_1687456585954_827158311",
+      "dateCreated": "2023-06-22T17:56:25+0000",
+      "dateStarted": "2023-06-22T18:00:21+0000",
+      "dateFinished": "2023-06-22T18:00:21+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:310"
+    },
+    {
+      "text": "data\n.groupBy(\n    \"tipoVivienda\",\n    \"area\",\n    \"tipoAlumbrado\")\n.count()\n.sort(\"tipoVivienda\",\"tipoAlumbrado\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------+----+-------------+-----+\n|tipoVivienda|area|tipoAlumbrado|count|\n+------------+----+-------------+-----+\n|           1|   1|            1|10566|\n|           1|   2|            1| 5083|\n|           1|   2|            2|   14|\n|           1|   1|            2|   14|\n|           1|   2|            3|   24|\n|           1|   1|            3|    2|\n|           1|   2|            4|    7|\n|           1|   1|            4|    4|\n|           2|   2|            1|  450|\n|           2|   1|            1| 7589|\n|           2|   1|            2|   11|\n|           2|   2|            2|    4|\n|           2|   1|            3|    1|\n|           2|   2|            3|    1|\n|           2|   1|            4|    1|\n|           3|   1|            1|  569|\n|           3|   2|            1|  109|\n|           4|   2|            1|  214|\n|           4|   1|            1|  586|\n|           4|   1|            2|    1|\n+------------+----+-------------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_1890049154",
+      "id": "paragraph_1687404769453_1276917344",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:311"
+    },
+    {
+      "text": "%md\n16. Agrupamos el tipo de vivienda, el area y el servicio de basura de los encuestados para saber cuantos coinciden.\n- 50 personas que viven en Casa/Villa y son del area urbana, contratan un servicio para botar la basura.",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T18:07:20+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"16\">\n<li>Agrupamos el tipo de vivienda, el area y el servicio de basura de los encuestados para saber cuantos coinciden.</li>\n</ol>\n<ul>\n<li>50 personas que viven en Casa/Villa y son del area urbana, contratan un servicio para botar la basura.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687457086424_17115821",
+      "id": "paragraph_1687457086424_17115821",
+      "dateCreated": "2023-06-22T18:04:46+0000",
+      "dateStarted": "2023-06-22T18:07:20+0000",
+      "dateFinished": "2023-06-22T18:07:20+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:312"
+    },
+    {
+      "text": "data\n.groupBy(\n    $\"tipoVivienda\", \n    $\"area\",\n    $\"botaBasura\")\n.count()\n//.where($\"botaBasura\" === 3)\n.sort($\"botaBasura\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------+----+----------+-----+\n|tipoVivienda|area|botaBasura|count|\n+------------+----+----------+-----+\n|           4|   2|         1|    1|\n|           1|   2|         1|    9|\n|           2|   2|         1|    5|\n|           5|   1|         1|    2|\n|           4|   1|         1|    3|\n|           1|   1|         1|   50|\n|           3|   2|         1|    1|\n|           2|   1|         1|   37|\n|           1|   2|         2| 3801|\n|           2|   2|         2|  417|\n|           1|   1|         2|10482|\n|           3|   2|         2|   99|\n|           3|   1|         2|  569|\n|           5|   2|         2|  379|\n|           4|   1|         2|  577|\n|           2|   1|         2| 7553|\n|           4|   2|         2|  142|\n|           5|   1|         2|  339|\n|           4|   2|         3|   11|\n|           1|   1|         3|   12|\n+------------+----+----------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_1129312376",
+      "id": "paragraph_1687405628100_1264676553",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:313"
+    },
+    {
+      "text": "%md\n17. Agrupamos las respuestas de los encuestados 1(SI)/2(NO) y para saber la cantidad de vehículos que disponen.\n- La mayor cantidad de encuestados no disponen de vehículos, dando un total de 19721 respuestas, mientras que solamente 2 personas disponen de 6 vehículos en su hogar.",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T18:12:47+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"17\">\n<li>Agrupamos las respuestas de los encuestados 1(SI)/2(NO) y para saber la cantidad de vehículos que disponen.</li>\n</ol>\n<ul>\n<li>La mayor cantidad de encuestados no disponen de vehículos, dando un total de 19721 respuestas, mientras que solamente 2 personas disponen de 6 vehículos en su hogar.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687457436934_1926472959",
+      "id": "paragraph_1687457436934_1926472959",
+      "dateCreated": "2023-06-22T18:10:36+0000",
+      "dateStarted": "2023-06-22T18:12:47+0000",
+      "dateFinished": "2023-06-22T18:12:47+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:314"
+    },
+    {
+      "text": "data\n.groupBy(\"vehiculosHogar\", \"cantidadVehiculos\")\n.count\n//.where($\"cantidadVehiculos\" === \"null\")\n.sort($\"vehiculosHogar\".desc, $\"cantidadVehiculos\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------+-----------------+-----+\n|vehiculosHogar|cantidadVehiculos|count|\n+--------------+-----------------+-----+\n|             2|                 |19721|\n|             1|                1| 6039|\n|             1|                2|  721|\n|             1|                3|   84|\n|             1|                4|   11|\n|             1|                5|    2|\n|             1|                6|    2|\n+--------------+-----------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024665_1375219224",
+      "id": "paragraph_1687406487633_1521320316",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:315"
+    },
+    {
+      "text": "%md\n18. Agrupamos las respuestas de los encuestados 1(SI)/2(NO) y para saber la cantidad de motos que disponen.\n- La mayor cantidad de encuestados no disponen de motos, dando un total de 23800 respuestas, mientras que solamente 3 personas disponen de 4 motos en su hogar.",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T18:14:16+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"18\">\n<li>Agrupamos las respuestas de los encuestados 1(SI)/2(NO) y para saber la cantidad de motos que disponen.</li>\n</ol>\n<ul>\n<li>La mayor cantidad de encuestados no disponen de motos, dando un total de 23800 respuestas, mientras que solamente 3 personas disponen de 4 motos en su hogar.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687457569827_1178523656",
+      "id": "paragraph_1687457569827_1178523656",
+      "dateCreated": "2023-06-22T18:12:49+0000",
+      "dateStarted": "2023-06-22T18:14:16+0000",
+      "dateFinished": "2023-06-22T18:14:16+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:316"
+    },
+    {
+      "text": "data\n.groupBy(\"motosHogar\", \"cantidadMotos\")\n.count\n//.where($\"cantidadVehiculos\" === \"null\")\n.sort($\"motosHogar\".desc, $\"cantidadMotos\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+-------------+-----+\n|motosHogar|cantidadMotos|count|\n+----------+-------------+-----+\n|         2|             |23800|\n|         1|            1| 2614|\n|         1|            2|  149|\n|         1|            3|   14|\n|         1|            4|    3|\n+----------+-------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_231024167",
+      "id": "paragraph_1687407290045_1513882351",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:317"
+    },
+    {
+      "text": "%md\n19. Agrupamos las respuestas de los encuestados 1(SI)/2(NO) y para saber la cantidad de vehículos y motos que disponen.\n- La mayor cantidad de encuestados no disponen ni de vehículos ni de motos, dando un total de 17507 respuestas, 2 personas, disponen de 2 vehículos y 4 motos, 658, disponen solamente de 2 autos y 115 disponen solamente de 2 motos.",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T18:36:43+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"19\">\n<li>Agrupamos las respuestas de los encuestados 1(SI)/2(NO) y para saber la cantidad de vehículos y motos que disponen.</li>\n</ol>\n<ul>\n<li>La mayor cantidad de encuestados no disponen ni de vehículos ni de motos, dando un total de 17507 respuestas, 2 personas, disponen de 2 vehículos y 4 motos, 658, disponen solamente de 2 autos y 115 disponen solamente de 2 motos.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687457658659_1596269871",
+      "id": "paragraph_1687457658659_1596269871",
+      "dateCreated": "2023-06-22T18:14:18+0000",
+      "dateStarted": "2023-06-22T18:36:43+0000",
+      "dateFinished": "2023-06-22T18:36:45+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:318"
+    },
+    {
+      "text": "data\n.groupBy(\"vehiculosHogar\", \"cantidadVehiculos\", \"motosHogar\", \"cantidadMotos\")\n.count\n//.where($\"cantidadVehiculos\" === \"null\")\n.sort($\"vehiculosHogar\".desc, $\"cantidadVehiculos\", $\"motosHogar\".desc, $\"cantidadMotos\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------+-----------------+----------+-------------+-----+\n|vehiculosHogar|cantidadVehiculos|motosHogar|cantidadMotos|count|\n+--------------+-----------------+----------+-------------+-----+\n|             2|                 |         2|             |17507|\n|             2|                 |         1|            1| 2088|\n|             2|                 |         1|            2|  115|\n|             2|                 |         1|            3|   10|\n|             2|                 |         1|            4|    1|\n|             1|                1|         2|             | 5552|\n|             1|                1|         1|            1|  459|\n|             1|                1|         1|            2|   24|\n|             1|                1|         1|            3|    4|\n|             1|                2|         2|             |  658|\n|             1|                2|         1|            1|   55|\n|             1|                2|         1|            2|    6|\n|             1|                2|         1|            4|    2|\n|             1|                3|         2|             |   70|\n|             1|                3|         1|            1|   10|\n|             1|                3|         1|            2|    4|\n|             1|                4|         2|             |    9|\n|             1|                4|         1|            1|    2|\n|             1|                5|         2|             |    2|\n|             1|                6|         2|             |    2|\n+--------------+-----------------+----------+-------------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_1601786652",
+      "id": "paragraph_1687407332134_1466812074",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:319"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687458978096_1493953869",
+      "id": "paragraph_1687458978096_1493953869",
+      "dateCreated": "2023-06-22T18:36:18+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5006",
+      "text": "%md\n20. Agrupamos el combustible extra para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.\n- 12 Persona que usan el combustible extra, han gastado $100.",
+      "dateUpdated": "2023-06-22T18:38:34+0000",
+      "dateFinished": "2023-06-22T18:38:34+0000",
+      "dateStarted": "2023-06-22T18:38:34+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"20\">\n<li>Agrupamos el combustible extra para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.</li>\n</ol>\n<ul>\n<li>12 Persona que usan el combustible extra, han gastado $100.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "data\n.groupBy(\"combustibleExtra\", \"gastoExtra\")\n.count\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------+----------+-----+\n|combustibleExtra|gastoExtra|count|\n+----------------+----------+-----+\n|               1|        38|    5|\n|               1|        62|    1|\n|               1|       110|   12|\n|               1|       108|    1|\n|               1|       130|    6|\n|               1|       320|    1|\n|                |          |17507|\n|               1|        15|  162|\n|               1|        70|   98|\n|               1|       300|    5|\n|               1|        17|    2|\n|               1|        35|   27|\n|               1|        85|    6|\n|               1|       230|    2|\n|               1|        75|   10|\n|               1|        25|   86|\n|               1|        20|  541|\n|               1|        55|    6|\n|               1|       135|    1|\n|               1|       240|    2|\n+----------------+----------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_1181682753",
+      "id": "paragraph_1687407431818_778156720",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:320"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687459119543_1250362911",
+      "id": "paragraph_1687459119543_1250362911",
+      "dateCreated": "2023-06-22T18:38:39+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5127",
+      "text": "%md\n21. Agrupamos el combustible extra para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.\n- 4720 personas no usan el combustible extra, mientras que, 541 han gastado $20 ",
+      "dateUpdated": "2023-06-22T18:41:56+0000",
+      "dateFinished": "2023-06-22T18:41:56+0000",
+      "dateStarted": "2023-06-22T18:41:56+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"21\">\n<li>Agrupamos el combustible extra para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.</li>\n</ol>\n<ul>\n<li>4720 personas no usan el combustible extra, mientras que, 541 han gastado $20</li>\n</ul>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "data\n  .groupBy($\"combustibleExtra\", $\"gastoExtra\")\n  .count()\n  .where($\"gastoExtra\".isNotNull and $\"combustibleExtra\".isNotNull)\n  .sort($\"gastoExtra\".cast(IntegerType))\n  .show()\n  ",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------+----------+-----+\n|combustibleExtra|gastoExtra|count|\n+----------------+----------+-----+\n|                |          |17507|\n|               2|          | 4720|\n|               1|         0|    9|\n|               1|         2|    1|\n|               1|         3|    3|\n|               1|         4|    1|\n|               1|         5|   29|\n|               1|         6|    6|\n|               1|         7|    5|\n|               1|         8|    8|\n|               1|        10|  190|\n|               1|        12|   30|\n|               1|        13|    1|\n|               1|        14|    4|\n|               1|        15|  162|\n|               1|        16|    9|\n|               1|        17|    2|\n|               1|        18|    5|\n|               1|        20|  541|\n|               1|        21|    1|\n+----------------+----------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_1652104405",
+      "id": "paragraph_1687408047694_133246371",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:321"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687459254037_1276903726",
+      "id": "paragraph_1687459254037_1276903726",
+      "dateCreated": "2023-06-22T18:40:54+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5214",
+      "text": "%md\n22. Agrupamos el combustible super para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.\n- 8580 personas no usan el combustible super, mientras que, 54 han gastado $20 ",
+      "dateUpdated": "2023-06-22T18:42:03+0000",
+      "dateFinished": "2023-06-22T18:42:03+0000",
+      "dateStarted": "2023-06-22T18:42:03+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"22\">\n<li>Agrupamos el combustible super para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.</li>\n</ol>\n<ul>\n<li>8580 personas no usan el combustible super, mientras que, 54 han gastado $20</li>\n</ul>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "data\n  .groupBy($\"combustibleSuper\", $\"gastoSuper\")\n  .count()\n  .where($\"gastoSuper\".isNotNull and $\"combustibleSuper\".isNotNull)\n  .sort($\"gastoSuper\".cast(IntegerType))\n  .show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------+----------+-----+\n|combustibleSuper|gastoSuper|count|\n+----------------+----------+-----+\n|                |          |17507|\n|               2|          | 8580|\n|               1|         0|    1|\n|               1|         5|    3|\n|               1|         6|    1|\n|               1|         8|    1|\n|               1|        10|   12|\n|               1|        12|    5|\n|               1|        15|   14|\n|               1|        16|    1|\n|               1|        20|   54|\n|               1|        25|   12|\n|               1|        30|   33|\n|               1|        33|    1|\n|               1|        40|   44|\n|               1|        50|   48|\n|               1|        60|   51|\n|               1|        70|   13|\n|               1|        75|    2|\n|               1|        80|   45|\n+----------------+----------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_286140961",
+      "id": "paragraph_1687408667658_1704334073",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:322"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687459303230_439251314",
+      "id": "paragraph_1687459303230_439251314",
+      "dateCreated": "2023-06-22T18:41:43+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5301",
+      "text": "%md\n23. Agrupamos el combustible gas para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.\n- 9069 personas no usan el combustible gas, mientras que, 1 de ellas ha gastado $80 ",
+      "dateUpdated": "2023-06-22T18:42:58+0000",
+      "dateFinished": "2023-06-22T18:42:58+0000",
+      "dateStarted": "2023-06-22T18:42:58+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"23\">\n<li>Agrupamos el combustible gas para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.</li>\n</ol>\n<ul>\n<li>9069 personas no usan el combustible gas, mientras que, 1 de ellas ha gastado $80</li>\n</ul>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "data\n  .groupBy($\"combustibleGas\", $\"gastoGas\")\n  .count()\n  .where($\"gastoGas\".isNotNull and $\"combustibleGas\".isNotNull)\n  .sort($\"gastoGas\".cast(IntegerType))\n  .show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------+--------+-----+\n|combustibleGas|gastoGas|count|\n+--------------+--------+-----+\n|             2|        | 9069|\n|              |        |17507|\n|             1|       1|    1|\n|             1|       2|    1|\n|             1|       3|    1|\n|             1|      80|    1|\n+--------------+--------+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_1613416090",
+      "id": "paragraph_1687408757740_148665411",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:323"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687459385022_1784408505",
+      "id": "paragraph_1687459385022_1784408505",
+      "dateCreated": "2023-06-22T18:43:05+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5434",
+      "text": "%md\n24. Agrupamos el combustible electricidad para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.\n- 9015 personas no usan el combustible lectricidad, mientras que, 18 de ellas han gastado $5 ",
+      "dateUpdated": "2023-06-22T18:44:15+0000",
+      "dateFinished": "2023-06-22T18:44:15+0000",
+      "dateStarted": "2023-06-22T18:44:15+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"24\">\n<li>Agrupamos el combustible electricidad para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.</li>\n</ol>\n<ul>\n<li>9015 personas no usan el combustible lectricidad, mientras que, 18 de ellas han gastado $5</li>\n</ul>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "data\n  .groupBy($\"combustibleElectricidad\", $\"gastoElectricidad\")\n  .count()\n  .where($\"gastoElectricidad\".isNotNull and $\"combustibleElectricidad\".isNotNull)\n  .sort($\"gastoElectricidad\".cast(IntegerType))\n  .show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------------+-----------------+-----+\n|combustibleElectricidad|gastoElectricidad|count|\n+-----------------------+-----------------+-----+\n|                       |                 |17507|\n|                      2|                 | 9015|\n|                      1|                0|    1|\n|                      1|                1|    1|\n|                      1|                2|    2|\n|                      1|                3|    3|\n|                      1|                5|   18|\n|                      1|                6|    3|\n|                      1|                7|    1|\n|                      1|                8|    1|\n|                      1|               10|    8|\n|                      1|               12|    2|\n|                      1|               13|    1|\n|                      1|               15|    4|\n|                      1|               16|    1|\n|                      1|               20|    4|\n|                      1|               23|    1|\n|                      1|               24|    1|\n|                      1|               30|    2|\n|                      1|               35|    1|\n+-----------------------+-----------------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_710845121",
+      "id": "paragraph_1687408783529_2007947571",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:324"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687459464919_2018233602",
+      "id": "paragraph_1687459464919_2018233602",
+      "dateCreated": "2023-06-22T18:44:24+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5521",
+      "text": "%md\n25. Agrupamos el combustible Ecopais para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.\n- 5319 personas no usan el combustible Ecopais, mientras que, 486 han gastado $20 ",
+      "dateUpdated": "2023-06-22T18:48:04+0000",
+      "dateFinished": "2023-06-22T18:48:04+0000",
+      "dateStarted": "2023-06-22T18:48:04+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"25\">\n<li>Agrupamos el combustible Ecopais para saber cuantas personas han usado este combustible, y cuantas coinciden con el mismo gasto.. Ordenamos y filtramos valores para obtener mejores resultados.</li>\n</ol>\n<ul>\n<li>5319 personas no usan el combustible Ecopais, mientras que, 486 han gastado $20</li>\n</ul>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=0",
+              "$$hashKey": "object:5924"
+            },
+            {
+              "jobUrl": "http://10.0.5.2:4040/jobs/job?id=1",
+              "$$hashKey": "object:5925"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687459545363_232584258",
+      "id": "paragraph_1687459545363_232584258",
+      "dateCreated": "2023-06-22T18:45:45+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5650",
+      "text": "data\n  .groupBy($\"combustibleEcopais\", $\"gastoEcopais\")\n  .count\n  .where($\"gastoEcopais\".isNotNull and $\"combustibleEcopais\".isNotNull)\n  .sort($\"gastoEcopais\".cast(IntegerType))\n  .show",
+      "dateUpdated": "2023-06-22T18:46:39+0000",
+      "dateFinished": "2023-06-22T18:46:43+0000",
+      "dateStarted": "2023-06-22T18:46:39+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------------+------------+-----+\n|combustibleEcopais|gastoEcopais|count|\n+------------------+------------+-----+\n|                  |            |17507|\n|                 2|            | 5319|\n|                 1|           0|    4|\n|                 1|           1|    1|\n|                 1|           2|    3|\n|                 1|           3|    3|\n|                 1|           4|    5|\n|                 1|           5|   26|\n|                 1|           6|    4|\n|                 1|           7|    1|\n|                 1|           8|   12|\n|                 1|          10|  173|\n|                 1|          12|   33|\n|                 1|          14|    6|\n|                 1|          15|  137|\n|                 1|          16|    8|\n|                 1|          18|   15|\n|                 1|          20|  486|\n|                 1|          21|    2|\n|                 1|          22|    4|\n+------------------+------------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "data\n.select(\"idVivienda\", \"idHogar\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------------------+--------------------+\n|        idVivienda|             idHogar|\n+------------------+--------------------+\n|101500002010260102|1.015000020102601...|\n|101500002010260202|1.015000020102602...|\n|101500002010260302|1.015000020102603...|\n|101500002010260402|1.015000020102604...|\n|101500002010260502|1.015000020102605...|\n|101500002010260602|1.015000020102606...|\n|101500002010260902|1.015000020102609...|\n|101500003040420103|1.015000030404201...|\n|101500003040420203|1.015000030404202...|\n|101500003040420303|1.015000030404203...|\n|101500003040420403|1.015000030404204...|\n|101500003040420503|1.015000030404205...|\n|101500003040420603|1.015000030404206...|\n|101500003040420703|1.015000030404207...|\n|101500011010280101|1.015000110102801...|\n|101500011010280201|1.015000110102802...|\n|101500011010280401|1.015000110102804...|\n|101500011010280501|1.015000110102805...|\n|101500011010280601|1.015000110102806...|\n|101500011010280701|1.015000110102807...|\n+------------------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_1750660699",
+      "id": "paragraph_1687408885111_327602829",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:326"
+    },
+    {
+      "text": "\ndata\n.select(\"fexp\", \"ump\", \"estrato\", \"periodo\", \"mes\")\n.show",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:38:36+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------+-----------+-------+-------+---+\n|            fexp|        ump|estrato|periodo|mes|\n+----------------+-----------+-------+-------+---+\n|30,1109079661847|10150000201|   2713| 202302|  2|\n|30,1109079661847|10150000201|   2713| 202302|  2|\n|30,1109079661847|10150000201|   2713| 202302|  2|\n|30,1109079661847|10150000201|   2713| 202302|  2|\n|30,1109079661847|10150000201|   2713| 202302|  2|\n|30,1109079661847|10150000201|   2713| 202302|  2|\n|30,1109079661847|10150000201|   2713| 202302|  2|\n| 64,008634100334|10150000304|   2712| 202303|  3|\n| 64,008634100334|10150000304|   2712| 202303|  3|\n| 64,008634100334|10150000304|   2712| 202303|  3|\n| 64,008634100334|10150000304|   2712| 202303|  3|\n| 64,008634100334|10150000304|   2712| 202303|  3|\n| 64,008634100334|10150000304|   2712| 202303|  3|\n| 64,008634100334|10150000304|   2712| 202303|  3|\n|558,366083040128|10150001101|   2713| 202301|  1|\n|558,366083040128|10150001101|   2713| 202301|  1|\n|558,366083040128|10150001101|   2713| 202301|  1|\n|558,366083040128|10150001101|   2713| 202301|  1|\n|558,366083040128|10150001101|   2713| 202301|  1|\n|558,366083040128|10150001101|   2713| 202301|  1|\n+----------------+-----------+-------+-------+---+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_590741517",
+      "id": "paragraph_1687408948698_50588342",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:327"
+    },
+    {
+      "text": "data.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "2023-06-22T15:33:44+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- area: integer (nullable = true)\n |-- ciudad: integer (nullable = true)\n |-- conglomerado: integer (nullable = true)\n |-- panelm: integer (nullable = true)\n |-- vivienda: integer (nullable = true)\n |-- hogar: integer (nullable = true)\n |-- viaAccesoPrincipal: integer (nullable = true)\n |-- tipoVivienda: integer (nullable = true)\n |-- materialVivienda: integer (nullable = true)\n |-- estadoMaterial: integer (nullable = true)\n |-- materialSuelo: integer (nullable = true)\n |-- estadoSuelo: integer (nullable = true)\n |-- materialParedes: integer (nullable = true)\n |-- estadoParedes: integer (nullable = true)\n |-- numCuartos: integer (nullable = true)\n |-- cuartosDormitorio: integer (nullable = true)\n |-- cuartoNegocio: integer (nullable = true)\n |-- cuartoCocina: integer (nullable = true)\n |-- combustibleCocina: integer (nullable = true)\n |-- servicioHigienico: integer (nullable = true)\n |-- sinServicioHigienico: string (nullable = true)\n |-- tipoSanitarioCercano: string (nullable = true)\n |-- servicioAgua: integer (nullable = true)\n |-- medidorAgua: string (nullable = true)\n |-- juntaAgua: string (nullable = true)\n |-- tipoAgua: integer (nullable = true)\n |-- servicioDucha: integer (nullable = true)\n |-- tipoAlumbrado: integer (nullable = true)\n |-- botaBasura: integer (nullable = true)\n |-- hogarVivienda: integer (nullable = true)\n |-- valorArriendo: integer (nullable = true)\n |-- arriendoAgua: string (nullable = true)\n |-- arriendoLuz: string (nullable = true)\n |-- relacionPropietario: string (nullable = true)\n |-- vehiculosHogar: integer (nullable = true)\n |-- cantidadVehiculos: string (nullable = true)\n |-- motosHogar: integer (nullable = true)\n |-- cantidadMotos: string (nullable = true)\n |-- combustibleSuper: string (nullable = true)\n |-- gastoSuper: string (nullable = true)\n |-- combustibleExtra: string (nullable = true)\n |-- gastoExtra: string (nullable = true)\n |-- combustibleDiesel: string (nullable = true)\n |-- gastoDiesel: string (nullable = true)\n |-- combustibleEcopais: string (nullable = true)\n |-- gastoEcopais: string (nullable = true)\n |-- combustibleElectricidad: string (nullable = true)\n |-- gastoElectricidad: string (nullable = true)\n |-- combustibleGas: string (nullable = true)\n |-- gastoGas: string (nullable = true)\n |-- estrato: integer (nullable = true)\n |-- fexp: string (nullable = true)\n |-- ump: long (nullable = true)\n |-- idVivienda: long (nullable = true)\n |-- idHogar: double (nullable = true)\n |-- periodo: integer (nullable = true)\n |-- mes: integer (nullable = true)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448024666_605305009",
+      "id": "paragraph_1687401914937_2079146169",
+      "dateCreated": "2023-06-22T15:33:44+0000",
+      "status": "READY",
+      "$$hashKey": "object:328"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687448161719_1731364844",
+      "id": "paragraph_1687448161719_1731364844",
+      "dateCreated": "2023-06-22T15:36:01+0000",
+      "status": "READY",
+      "$$hashKey": "object:329"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1687459551615_158684303",
+      "id": "paragraph_1687459551615_158684303",
+      "dateCreated": "2023-06-22T18:45:51+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:5725"
+    }
+  ],
+  "name": "Entregable 1",
+  "id": "2J4KW5VRY",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Entregable 1"
+}
