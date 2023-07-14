@@ -12,14 +12,6 @@ NULLIF(d.arriendoLuz, ' '),
 NULLIF(d.relacionPropietario, ' ')
 FROM p_integrador.dataset d;
 
-INSERT INTO gastosArriendo (valor_arriendo, arriendoAgua, arriendoLuz, parentesco_dueño)
-SELECT
-NULLIF(d.valorArriendo, ' '),
-NULLIF(d.arriendoAgua, ' '),
-NULLIF(d.arriendoLuz, ' '),
-NULLIF(d.relacionPropietario, ' ')
-FROM p_integrador.dataset d;
-
 
 CREATE TABLE Vivienda_temp LIKE Vivienda;
 
