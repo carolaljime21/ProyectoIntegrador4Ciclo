@@ -12,6 +12,14 @@ NULLIF(d.arriendoLuz, ' '),
 NULLIF(d.relacionPropietario, ' ')
 FROM p_integrador.dataset d;
 
+INSERT INTO gastosArriendo (valor_arriendo, arriendoAgua, arriendoLuz, parentesco_dueño)
+SELECT
+NULLIF(d.valorArriendo, ' '),
+NULLIF(d.arriendoAgua, ' '),
+NULLIF(d.arriendoLuz, ' '),
+NULLIF(d.relacionPropietario, ' ')
+FROM p_integrador.dataset d;
+
 
 CREATE TABLE Vivienda_temp LIKE Vivienda;
 
@@ -298,7 +306,6 @@ WHERE rn = 1
 ORDER BY ciudad, acceso_internet;
 
 INSERT INTO tics_ciudad
-
     (
     ciudad,
     acceso_internet,
@@ -321,3 +328,16 @@ SELECT
 FROM tics_ciudad_temp;
 
 drop table tics_ciudad_temp;
+
+
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (170150, 'Quito');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (90150, 'Guayaquil');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (70150, 'Machala');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (10150, 'Cuenca');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (180150, 'Ambato');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (80150, 'Esmeraldas');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (100150, 'Ibarra');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (230150, 'Santo Domingo de los Colorados');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (110150, 'Loja');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (240250, 'La libertad');
+

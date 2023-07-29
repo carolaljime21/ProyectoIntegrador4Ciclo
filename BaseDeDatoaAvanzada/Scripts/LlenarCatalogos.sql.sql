@@ -131,3 +131,21 @@ INSERT INTO enemduVIVIENDAS.articulos_tecnologicos VALUES (3, 'Servicio de telé
 INSERT INTO enemduVIVIENDAS.articulos_tecnologicos VALUES (4, 'Servicio de telefonía celular');
 INSERT INTO enemduVIVIENDAS.articulos_tecnologicos VALUES (5, 'Teléfono inteligente o smartphone');
 INSERT INTO enemduVIVIENDAS.articulos_tecnologicos VALUES (6, 'Smart TV (Televisor inteligente)');
+
+use enemduVIVIENDAS;
+INSERT INTO AreaCatalogo (AreaID, Descripcion)
+VALUES
+(1, 'Urbana'),
+(2, 'Rural');
+
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (170150, 'Quito');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (90150, 'Guayaquil');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (70150, 'Machala');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (10150, 'Cuenca');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (180150, 'Ambato');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (80150, 'Esmeraldas');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (100150, 'Ibarra');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (230150, 'Santo Domingo de los Colorados');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (110150, 'Loja');
+INSERT INTO enemduVIVIENDAS.ciudades VALUES (240250, 'La libertad');
+
